@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enterBtn = document.getElementById('enter-site-btn');
     const progressBar = document.getElementById('welcome-progress');
     const replayBtns = document.querySelectorAll('.js-replay-welcome');
+    const backgroundSections = document.querySelectorAll('header, main, footer');
 
     if (!overlay) return;
 
@@ -22,7 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
         performance.getEntriesByType('navigation')[0]?.type === 'reload';
     const urlParams = new URLSearchParams(window.location.search);
     const forceIntro = urlParams.has('intro') || urlParams.has('welcome');
-    const hasSeen = sessionStorage.getItem('digitalResumeWelcomeSeen');
+    
+    let hasSeen = false;
+    try {
+        hasSeen = sessionStorage.getItem('digitalResumeWelcomeSeen') === 'true';
+    } catch (e) {
+        // Fallback for private browsing / blocked storage
+        hasSeen = false;
+    }
+
+    function setBackgroundInert(inert) {
+        backgroundSections.forEach(section => {
+            if (inert) {
+                section.setAttribute('inert', '');
+                section.setAttribute('aria-hidden', 'true');
+            } else {
+                section.removeAttribute('inert');
+                section.removeAttribute('aria-hidden');
+            }
+        });
+    }
 
     function startAutoFade() {
         if (!progressBar) return;
@@ -53,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.setAttribute('aria-hidden', 'false');
         document.body.classList.add('welcome-active');
         document.body.classList.remove('welcome-loaded');
+        setBackgroundInert(true);
 
         // Scroll to top when replaying
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -78,8 +99,19 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('welcome-active');
         document.body.classList.add('welcome-loaded');
+        setBackgroundInert(false);
 
-        sessionStorage.setItem('digitalResumeWelcomeSeen', 'true');
+        try {
+            sessionStorage.setItem('digitalResumeWelcomeSeen', 'true');
+        } catch (e) {
+            // Storage quota or private browsing
+        }
+
+        // Clean up ?intro=1 query parameter so refreshing afterwards behaves normally
+        if (forceIntro && window.history && window.history.replaceState) {
+            const cleanUrl = window.location.pathname;
+            window.history.replaceState({}, document.title, cleanUrl);
+        }
 
         // Remove from view once transition completes
         setTimeout(() => {
@@ -128,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         overlay.style.display = 'none';
         overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('welcome-active');
         document.body.classList.add('welcome-loaded');
+        setBackgroundInert(false);
     }
 });
