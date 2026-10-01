@@ -292,7 +292,7 @@ function initContactForm() {
                 showStatus(
                     'success',
                     'Message Sent Successfully!',
-                    `Thank you, <strong>${escapeHtml(name)}</strong>! Your message has been forwarded to Dalila at <code>dalilagranados08@gmail.com</code>. She will review it and reply as soon as possible.`
+                    `Thank you, <strong>${escapeHtml(name)}</strong>! Your message has been sent. I will review it and get back to you as soon as possible.`
                 );
                 contactForm.reset();
             } else {
@@ -305,14 +305,14 @@ function initContactForm() {
 
             showStatus(
                 'error',
-                'Automatic Delivery Notice',
-                `We could not submit through the automated form service (${escapeHtml(error.message)}). Your message is preserved below &mdash; click the button to open your email client and send it directly:`,
+                'Message Delivery Notice',
+                `There was an issue sending your message automatically (${escapeHtml(error.message)}). Your text is preserved &mdash; click below to send it directly:`,
                 `<a href="${mailtoUrl}" class="status-mailto-btn" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
-                    Send Directly via Email App
+                    Send via Email App
                 </a>`
             );
         } finally {
