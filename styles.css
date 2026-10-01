@@ -837,18 +837,6 @@ body.welcome-loaded footer {
     display: block;
 }
 
-.welcome-status-dot {
-    position: absolute;
-    bottom: 3px;
-    right: 3px;
-    width: 15px;
-    height: 15px;
-    background-color: #22c55e;
-    border: 2.5px solid #0f172a;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #22c55e;
-}
-
 /* Typography Inside Welcome Card */
 .welcome-title {
     font-size: 2.15rem;
