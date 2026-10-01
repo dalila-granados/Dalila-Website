@@ -63,13 +63,18 @@ body {
     background-color: var(--bg-main);
     background-image: 
         url('gold-stars-1.svg'),
-        url('gold-stars-2.svg');
-    background-repeat: no-repeat, no-repeat;
+        url('gold-stars-2.svg'),
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg'),
+        url('gold-stars-1.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: 
         calc(50% - 630px) 140px,
-        calc(50% + 520px) 280px;
-    background-size: 260px auto, 300px auto;
-    background-attachment: fixed, fixed;
+        calc(50% + 530px) 260px,
+        calc(50% - 610px) 680px,
+        calc(50% + 520px) 880px,
+        calc(50% - 620px) 1300px;
+    background-size: 260px auto, 300px auto, 240px auto, 270px auto, 250px auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -110,7 +115,7 @@ h2::after {
     width: 60px;
     height: 3px;
     border-radius: 2px;
-    background: linear-gradient(90deg, var(--primary-baby-blue) 0%, var(--accent-color) 100%);
+    background: linear-gradient(90deg, #38bdf8 0%, #0284c7 50%, #0369a1 100%);
 }
 
 h3 {
@@ -602,8 +607,11 @@ footer p {
     body {
         background-position: 
             left 10px top 140px,
-            right 10px top 280px;
-        background-size: 180px auto, 200px auto;
+            right 10px top 260px,
+            left 10px top 680px,
+            right 10px top 880px,
+            left 10px top 1300px;
+        background-size: 180px auto, 200px auto, 170px auto, 190px auto, 180px auto;
     }
 }
 
@@ -747,6 +755,61 @@ body.welcome-loaded footer {
     animation: welcomeFloatRight 8s ease-in-out infinite alternate;
 }
 
+.welcome-star-top-right {
+    top: 3%;
+    right: 18%;
+    max-width: 220px;
+    animation: welcomeFloatRight 9s ease-in-out infinite alternate;
+}
+
+.welcome-star-bottom-left {
+    bottom: 3%;
+    left: 16%;
+    max-width: 230px;
+    animation: welcomeFloatLeft 8.5s ease-in-out infinite alternate;
+}
+
+/* Cute Floating Twinkling Stars */
+.welcome-sparkles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cute-star {
+    position: absolute;
+    color: #eab308;
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.7);
+    user-select: none;
+    animation: starTwinkle 3s ease-in-out infinite alternate;
+}
+
+.star-1 { top: 16%; left: 22%; font-size: 1.4rem; animation-delay: 0.2s; color: #facc15; }
+.star-2 { top: 26%; right: 22%; font-size: 1.8rem; animation-delay: 0.8s; color: #fef08a; }
+.star-3 { bottom: 22%; left: 26%; font-size: 1.3rem; animation-delay: 1.4s; color: #eab308; }
+.star-4 { bottom: 18%; right: 24%; font-size: 1.5rem; animation-delay: 2.1s; color: #facc15; }
+.star-5 { top: 10%; left: 48%; font-size: 1.2rem; animation-delay: 0.5s; color: #fef08a; }
+.star-6 { bottom: 12%; left: 50%; font-size: 1.4rem; animation-delay: 1.8s; color: #facc15; }
+.star-7 { top: 38%; left: 10%; font-size: 1.6rem; animation-delay: 1.1s; color: #eab308; }
+.star-8 { top: 42%; right: 12%; font-size: 1.5rem; animation-delay: 2.4s; color: #fef08a; }
+
+@keyframes starTwinkle {
+    0% {
+        opacity: 0.25;
+        transform: scale(0.8) rotate(-10deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.25) rotate(15deg);
+    }
+    100% {
+        opacity: 0.4;
+        transform: scale(0.9) rotate(0deg);
+    }
+}
+
 @keyframes welcomeFloatLeft {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -863,9 +926,9 @@ body.welcome-loaded footer {
 .welcome-timer-progress {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #38bdf8 0%, #facc15 100%);
+    background: linear-gradient(90deg, #7dd3fc 0%, #0284c7 50%, #0369a1 100%);
     border-radius: var(--radius-full);
-    box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    box-shadow: 0 0 8px rgba(2, 132, 199, 0.45);
 }
 
 /* Enter Website Button */
