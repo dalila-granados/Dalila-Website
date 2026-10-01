@@ -1,0 +1,556 @@
+/* ==========================================================================
+   Dalila Granados - Personal Portfolio & Resume Stylesheet
+   Modern, responsive, and clean design system using Vanilla CSS.
+   ========================================================================== */
+
+/* CSS Custom Properties / Design Tokens */
+:root {
+    --primary-color: #8f25ebaa;
+    --primary-hover: #811dd8;
+    --primary-light: #eff6ff;
+    --secondary-color: #0f172a;
+    --accent-color: #dfdf37;
+    --accent-light: #f0fdfa;
+
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.25s ease-in-out;
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.25rem;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Layout Container */
+.container,
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Header & Site Brand */
+header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 1.75rem;
+    padding-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.brand-wrapper {
+    margin-bottom: 1rem;
+}
+
+.brand-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.brand-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.contact-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+}
+
+.contact-meta a {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.contact-meta a:hover {
+    color: var(--primary-color);
+}
+
+/* Navigation */
+nav {
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.nav-links a:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+/* Section Card Wrappers */
+section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-normal);
+}
+
+section:hover {
+    box-shadow: var(--shadow-md);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1.75rem 0;
+}
+
+/* Profile / Bio Section */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.profile-avatar {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.profile-avatar img {
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--border-color);
+    background-color: var(--bg-main);
+    box-shadow: var(--shadow-md);
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-avatar figcaption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    max-width: 180px;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+/* Skills Definition List */
+dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 700px) {
+    dl {
+        grid-template-columns: 220px 1fr;
+        align-items: baseline;
+    }
+}
+
+dt {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+dd {
+    color: var(--text-secondary);
+    margin-left: 0;
+}
+
+/* Cards & Articles (Experience & Projects) */
+article {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+article:last-of-type {
+    margin-bottom: 0;
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.meta-date {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+ul,
+ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+}
+
+/* Project Cards Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 680px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-tech {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border-color);
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--bg-main);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+tr:hover td {
+    background-color: var(--accent-light);
+}
+
+/* Form Styles */
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    background-color: var(--bg-main);
+}
+
+legend {
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 0 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+button[type="reset"] {
+    background-color: #ffffff;
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+/* Details & Summary (Collapsible) */
+details {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+    background-color: var(--bg-main);
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+details[open] summary {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}

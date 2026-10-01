@@ -1,196 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Profile and Portfolio of Alex Rivera, Senior Software Engineer and Solutions Architect.">
-    <title>Alex Rivera - Personal Profile</title>
+    <meta name="description"
+        content="Personal Profile and Portfolio of Dalila Stephany Granados-Martinez, Information Systems and Analytics student at Louisiana State University.">
+    <title>Dalila Stephany Granados-Martinez | Home &amp; Profile</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Alex Rivera</h1>
-        <p><strong>Senior Software Engineer &amp; Systems Architect</strong></p>
-        <p>Location: San Francisco, CA | Email: <a href="mailto:alex.rivera.dev@example.com">alex.rivera.dev@example.com</a> | Phone: <a href="tel:+15550192834">+1 (555) 019-2834</a></p>
-        
-        <nav aria-label="Main Navigation">
-            <p>
-                Jump to:
-                <a href="#about">About</a> |
-                <a href="#skills">Skills</a> |
-                <a href="#experience">Experience</a> |
-                <a href="#projects">Projects</a> |
-                <a href="#education">Education</a> |
-                <a href="#contact">Contact</a>
+        <div class="brand-wrapper">
+            <h1 class="brand-title">Dalila Stephany Granados-Martinez</h1>
+            <p class="brand-subtitle">Information Systems &amp; Analytics &bull; Cyber Risk Concentration &bull; LSU</p>
+            <p class="contact-meta">
+                Location: Baton Rouge, Louisiana &bull;
+                Email: <a href="mailto:dalilagranados08@gmail.com">dalilagranados08@gmail.com</a> &bull;
+                GitHub: <a href="https://github.com/dalila-granados" target="_blank"
+                    rel="noopener noreferrer">github.com/dalila-granados</a>
             </p>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="project.html">Projects</a></li>
+            </ul>
         </nav>
-        <hr>
     </header>
 
     <main>
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <figure>
-                <img src="https://via.placeholder.com/180" alt="Portrait of Alex Rivera" width="180" height="180">
-                <figcaption>Alex Rivera &mdash; Engineering scalable distributed systems and open-source tools.</figcaption>
-            </figure>
-            <p>
-                Hello! I am a software engineer with over 8 years of experience designing and implementing highly scalable web architectures, microservices, and developer productivity tooling. I am passionate about distributed computing, data pipeline reliability, and mentoring emerging engineering talent.
-            </p>
-            <p>
-                Currently, I lead architecture initiatives for cloud infrastructure, focusing on high-throughput streaming platforms, automated CI/CD pipelines, and observability.
-            </p>
+            <div class="profile-card">
+                <figure class="profile-avatar">
+                    <img src="headshot.png" alt="Headshot of Dalila Stephany Granados-Martinez" width="160"
+                        height="160">
+                    <figcaption>Dalila Stephany Granados-Martinez &mdash; Information Systems, Cyber Risk &amp;
+                        Technology Operations.</figcaption>
+                </figure>
+                <div class="profile-content">
+                    <p>
+                        Welcome! I am <strong>Dalila Stephany Granados-Martinez</strong>, an Information Systems and
+                        Analytics undergraduate at <strong>Louisiana State University (LSU)</strong> concentrating in
+                        <strong>Cyber Risk</strong>
+                    </p>
+                    <p>
+                        I am currently an Operations Specialist at Apple,
+                        managing end-to-end retail operations, high-volume inventory workflows, and customer problem
+                        resolution.
+                    </p>
+                    <p>
+                        My background also includes technical support at LSU Frey Computing Services, serving as Lead
+                        Repair Technician at UBreakIFix diagnosing Apple, Samsung, and Google devices, and retail
+                        leadership as a Manager at Walgreens.
+                    </p>
+                    <p>
+                        Explore my comprehensive work history and coursework on my <a href="resume.html">Resume</a> page
+                        (or <a href="Resume.pdf" download>download my Resume PDF</a>), and review my software and
+                        analytics work on the <a href="project.html">Projects</a> page.
+                    </p>
+                </div>
+            </div>
         </section>
-        <hr>
 
-        <!-- Technical Skills Section -->
-        <section id="skills">
-            <h2>Core Competencies &amp; Technical Skills</h2>
+        <!-- Core Competencies Overview -->
+        <section id="overview">
+            <h2>Core Competencies &amp; Skills</h2>
             <dl>
-                <dt><strong>Programming Languages:</strong></dt>
-                <dd>Go, Python, TypeScript, Java, Rust, SQL</dd>
+                <dt> Currently Learning:</dt>
+                <dd> Python, HTML, CSS, JavaScript, SQL </dd>
 
-                <dt><strong>Cloud &amp; Infrastructure:</strong></dt>
-                <dd>Google Cloud Platform (GCP), AWS, Kubernetes, Docker, Terraform</dd>
+                <dt>Information Systems:</dt>
+                <dd>Data Modeling, Business Analytics, Technical Documentation, Spreadsheets</dd>
 
-                <dt><strong>Data &amp; Storage:</strong></dt>
-                <dd>PostgreSQL, Redis, Apache Kafka, BigQuery, Elasticsearch</dd>
+                <dt>Technical Support:</dt>
+                <dd>Remote Tech Support, Troubleshooting, Hardware &amp; Device Repair, Customer Tech Support</dd>
 
-                <dt><strong>Practices &amp; Methodologies:</strong></dt>
-                <dd>Distributed Systems, Domain-Driven Design (DDD), CI/CD, Agile/Scrum, Observability &amp; SRE</dd>
+                <dt>Technology &amp; Platforms:</dt>
+                <dd>Apple, Samsung, and Google Devices; Google Sheets, Docs, Slides, and Forms</dd>
+
+                <dt>Languages:</dt>
+                <dd>English (Fluent), Spanish (Fluent)</dd>
             </dl>
         </section>
-        <hr>
 
-        <!-- Work Experience Section -->
-        <section id="experience">
-            <h2>Work Experience</h2>
+        <!-- Featured Projects Section -->
+        <section id="featured-work">
+            <h2>Projects</h2>
+            <p>I am actively building projects throughout my Information Systems and Analytics coursework. You can learn
+                more on the <a href="project.html">Projects Page</a>.</p>
 
-            <article>
-                <h3>Staff Infrastructure Engineer &mdash; CloudScale Technologies</h3>
-                <p><time datetime="2022-03">March 2022</time> &ndash; <em>Present</em> | San Francisco, CA</p>
-                <ul>
-                    <li>Spearheaded migration of legacy monolith into event-driven microservices running on Kubernetes across multi-region clusters.</li>
-                    <li>Reduced mean time to recovery (MTTR) by 42% through automated health remediation pipelines and OpenTelemetry integration.</li>
-                    <li>Mentored 12 mid-level and junior engineers across backend and site reliability squads.</li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>Senior Backend Engineer &mdash; DataFlow Systems</h3>
-                <p><time datetime="2019-06">June 2019</time> &ndash; <time datetime="2022-02">February 2022</time> | Austin, TX</p>
-                <ul>
-                    <li>Architected an Apache Kafka-based event processing engine that handles over 50,000 transactions per second.</li>
-                    <li>Optimized SQL execution plans and Redis caching, cutting average API latency from 240ms to 48ms.</li>
-                    <li>Collaborated with product teams to translate compliance requirements into automated audit trail features.</li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>Software Engineer &mdash; Nexa Software</h3>
-                <p><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2019-05">May 2019</time> | Boston, MA</p>
-                <ul>
-                    <li>Developed and maintained RESTful and GraphQL APIs serving 2M+ monthly active users.</li>
-                    <li>Automated end-to-end integration test suites, increasing automated code coverage from 61% to 89%.</li>
-                </ul>
+            <article class="project-card">
+                <div>
+                    <h3>Personal Portfolio &amp; Resume Website</h3>
+                    <span class="project-tech">HTML5 &bull; CSS3 &bull; Git &bull; GitHub</span>
+                    <p>A multi-page responsive personal profile and resume website built with semantic HTML and CSS to
+                        document my academic achievements, technical competencies, and professional background.</p>
+                </div>
+                <div class="project-links">
+                    <a href="project.html">Learn More on Projects Page &rarr;</a>
+                </div>
             </article>
         </section>
-        <hr>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
-
-            <article>
-                <h3>1. StreamShield &mdash; Real-Time Anomaly Detection Engine</h3>
-                <p>An open-source distributed anomaly detection system for high-volume logs and metrics.</p>
-                <ul>
-                    <li><strong>Technologies:</strong> Go, Kafka, Redis, Prometheus</li>
-                    <li><strong>Repository:</strong> <a href="https://github.com/example/stream-shield" target="_blank" rel="noopener noreferrer">github.com/example/stream-shield</a></li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>2. QueryPulse &mdash; Database Query Profiler CLI</h3>
-                <p>A lightweight command-line tool to analyze and benchmark PostgreSQL queries with visual query tree breakdowns.</p>
-                <ul>
-                    <li><strong>Technologies:</strong> Rust, PostgreSQL</li>
-                    <li><strong>Repository:</strong> <a href="https://github.com/example/query-pulse" target="_blank" rel="noopener noreferrer">github.com/example/query-pulse</a></li>
-                </ul>
-            </article>
-        </section>
-        <hr>
-
-        <!-- Education & Certifications -->
-        <section id="education">
-            <h2>Education &amp; Certifications</h2>
-
-            <h3>Education</h3>
-            <ul>
-                <li>
-                    <strong>Bachelor of Science in Computer Science</strong><br>
-                    University of California, Berkeley &mdash; Graduated <time datetime="2016-05">May 2016</time>
-                </li>
-            </ul>
-
-            <h3>Certifications</h3>
-            <ul>
-                <li>Certified Kubernetes Administrator (CKA) &mdash; Cloud Native Computing Foundation</li>
-                <li>Google Cloud Certified Professional Cloud Architect</li>
-            </ul>
-        </section>
-        <hr>
-
-        <!-- Links & Social Profiles -->
-        <section id="links">
-            <h2>Profiles &amp; Web Presence</h2>
-            <ul>
-                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://bsky.app" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
-            </ul>
-        </section>
-        <hr>
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out via the form below or directly through email.</p>
+            <h2>Contact Me</h2>
+            <p>I would love to connect regarding any opportunities, internship roles, and collaborative projects.
+                Feel free to reach out via phone, email, or using the form below.</p>
 
             <form action="#" method="post">
                 <fieldset>
-                    <legend>Contact Form</legend>
-                    <p>
-                        <label for="name">Your Name:</label><br>
-                        <input type="text" id="name" name="name" required>
-                    </p>
-                    <p>
-                        <label for="email">Your Email:</label><br>
-                        <input type="email" id="email" name="email" required>
-                    </p>
-                    <p>
-                        <label for="subject">Subject:</label><br>
-                        <input type="text" id="subject" name="subject" required>
-                    </p>
-                    <p>
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="6" cols="40" required></textarea>
-                    </p>
-                    <p>
+                    <legend>Direct Contact Inquiry</legend>
+                    <div class="form-group">
+                        <label for="contact-name">Your Full Name:</label>
+                        <input type="text" id="contact-name" name="name" placeholder="First and Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your Email Address:</label>
+                        <input type="email" id="contact-email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject:</label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="Inquiry topic" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Your message here..."
+                            required></textarea>
+                    </div>
+                    <div class="form-actions">
                         <button type="submit">Send Message</button>
                         <button type="reset">Clear Form</button>
-                    </p>
+                    </div>
                 </fieldset>
             </form>
         </section>
     </main>
 
-    <hr>
     <footer>
-        <p>&copy; 2026 Alex Rivera. All rights reserved.</p>
-        <p><small>Created entirely with standard semantic HTML.</small></p>
+        <nav aria-label="Footer Navigation" class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html">Projects</a>
+            <a href="https://github.com/dalila-granados" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <p>&copy; 2026 Dalila Stephany Granados-Martinez. All rights reserved.</p>
+        <p><small>Built with semantic HTML5 and clean CSS styling.</small></p>
     </footer>
 
 </body>
+
 </html>
