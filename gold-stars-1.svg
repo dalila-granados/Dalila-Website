@@ -1,59 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" fill="none">
+    <!-- Filter for subtle warm sparkle glow -->
+    <defs>
+        <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#d97706" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+
     <!-- Star 1: Elegant 4-point sparkle (Top Left) -->
-    <g transform="translate(48, 56)">
-        <path d="M 0,-10 Q 0,0 10,0 Q 0,0 0,10 Q 0,0 -10,0 Q 0,0 0,-10 Z" fill="#d4af37" opacity="0.55"/>
-        <circle cx="0" cy="0" r="1.5" fill="#fffbe8" opacity="0.8"/>
+    <g transform="translate(55, 60)" filter="url(#goldGlow)">
+        <path d="M 0,-16 Q 0,0 16,0 Q 0,0 0,16 Q 0,0 -16,0 Q 0,0 0,-16 Z" fill="#d97706"/>
+        <path d="M 0,-10 Q 0,0 10,0 Q 0,0 0,10 Q 0,0 -10,0 Q 0,0 0,-10 Z" fill="#f59e0b"/>
+        <circle cx="0" cy="0" r="2.5" fill="#fffef0"/>
     </g>
 
     <!-- Star 2: 5-point star (Top Right) -->
-    <g transform="translate(230, 42) scale(0.9)">
-        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#e5b83b" opacity="0.48"/>
+    <g transform="translate(260, 50) scale(1.3)" filter="url(#goldGlow)">
+        <polygon points="0,-8 2.4,-2.4 8,-2.4 3.4,1 5,7 0,3.4 -5,7 -3.4,1 -8,-2.4 -2.4,-2.4" fill="#eab308"/>
+        <polygon points="0,-5 1.5,-1.5 5,-1.5 2.1,0.6 3.1,4.4 0,2.1 -3.1,4.4 -2.1,0.6 -5,-1.5 -1.5,-1.5" fill="#fef08a"/>
     </g>
 
     <!-- Star 3: Diamond sparkle (Upper Center) -->
-    <g transform="translate(142, 110)">
-        <path d="M 0,-7 Q 0,0 7,0 Q 0,0 0,7 Q 0,0 -7,0 Q 0,0 0,-7 Z" fill="#f3c448" opacity="0.5"/>
-        <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.7"/>
+    <g transform="translate(155, 120)" filter="url(#goldGlow)">
+        <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#d97706"/>
+        <circle cx="0" cy="0" r="2" fill="#ffffff"/>
     </g>
 
-    <!-- Star 4: Micro cross sparkle (Right) -->
-    <g transform="translate(315, 125)">
-        <path d="M 0,-5 L 0,5 M -5,0 L 5,0" stroke="#dfb142" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+    <!-- Star 4: Micro 4-point sparkle (Far Right) -->
+    <g transform="translate(325, 130)">
+        <path d="M 0,-9 Q 0,0 9,0 Q 0,0 0,9 Q 0,0 -9,0 Q 0,0 0,-9 Z" fill="#f59e0b"/>
+        <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
     </g>
 
     <!-- Star 5: 5-point star (Left Center) -->
-    <g transform="translate(75, 185) scale(0.75)">
-        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#d4af37" opacity="0.45"/>
+    <g transform="translate(85, 200) scale(1.15)" filter="url(#goldGlow)">
+        <polygon points="0,-8 2.4,-2.4 8,-2.4 3.4,1 5,7 0,3.4 -5,7 -3.4,1 -8,-2.4 -2.4,-2.4" fill="#f59e0b"/>
     </g>
 
-    <!-- Star 6: Large 4-point sparkle (Center Right) -->
-    <g transform="translate(195, 215)">
-        <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#e5b83b" opacity="0.52"/>
-        <circle cx="0" cy="0" r="1.8" fill="#fffbe8" opacity="0.85"/>
+    <!-- Star 6: Large Radiant 4-point sparkle (Center Right) -->
+    <g transform="translate(225, 230)" filter="url(#goldGlow)">
+        <path d="M 0,-20 Q 0,0 20,0 Q 0,0 0,20 Q 0,0 -20,0 Q 0,0 0,-20 Z" fill="#d97706"/>
+        <path d="M 0,-13 Q 0,0 13,0 Q 0,0 0,13 Q 0,0 -13,0 Q 0,0 0,-13 Z" fill="#facc15"/>
+        <circle cx="0" cy="0" r="3" fill="#ffffff"/>
     </g>
 
     <!-- Star 7: 4-point sparkle (Lower Right) -->
-    <g transform="translate(310, 275)">
-        <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="#f3c448" opacity="0.46"/>
-        <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.7"/>
+    <g transform="translate(315, 290)" filter="url(#goldGlow)">
+        <path d="M 0,-13 Q 0,0 13,0 Q 0,0 0,13 Q 0,0 -13,0 Q 0,0 0,-13 Z" fill="#eab308"/>
+        <circle cx="0" cy="0" r="2" fill="#ffffff"/>
     </g>
 
     <!-- Star 8: 5-point star (Bottom Left) -->
-    <g transform="translate(110, 295) scale(0.8)">
-        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#d4af37" opacity="0.42"/>
+    <g transform="translate(120, 310) scale(1.2)" filter="url(#goldGlow)">
+        <polygon points="0,-8 2.4,-2.4 8,-2.4 3.4,1 5,7 0,3.4 -5,7 -3.4,1 -8,-2.4 -2.4,-2.4" fill="#d97706"/>
+        <circle cx="0" cy="0" r="1.5" fill="#fef08a"/>
     </g>
 
-    <!-- Star 9: Micro cross sparkle (Bottom Center) -->
-    <g transform="translate(245, 315)">
-        <path d="M 0,-4.5 L 0,4.5 M -4.5,0 L 4.5,0" stroke="#f3c448" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+    <!-- Star 9: Cross sparkle (Bottom Center) -->
+    <g transform="translate(255, 325)">
+        <path d="M 0,-8 L 0,8 M -8,0 L 8,0" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
     </g>
 
-    <!-- Subtle Stardust Specks -->
-    <circle cx="25" cy="140" r="1.5" fill="#d4af37" opacity="0.35"/>
-    <circle cx="160" cy="25" r="1.5" fill="#f3c448" opacity="0.32"/>
-    <circle cx="280" cy="70" r="1.3" fill="#e5b83b" opacity="0.3"/>
-    <circle cx="260" cy="170" r="1.5" fill="#d4af37" opacity="0.33"/>
-    <circle cx="130" cy="245" r="1.3" fill="#f3c448" opacity="0.3"/>
-    <circle cx="35" cy="325" r="1.5" fill="#e5b83b" opacity="0.35"/>
-    <circle cx="335" cy="345" r="1.2" fill="#d4af37" opacity="0.28"/>
+    <!-- Vibrant Stardust Specks -->
+    <circle cx="30" cy="140" r="2.5" fill="#f59e0b" opacity="0.85"/>
+    <circle cx="170" cy="30" r="2" fill="#eab308" opacity="0.8"/>
+    <circle cx="300" cy="75" r="2.2" fill="#d97706" opacity="0.8"/>
+    <circle cx="280" cy="180" r="2.5" fill="#f59e0b" opacity="0.85"/>
+    <circle cx="140" cy="255" r="2" fill="#eab308" opacity="0.8"/>
+    <circle cx="45" cy="335" r="2.5" fill="#d97706" opacity="0.85"/>
+    <circle cx="345" cy="350" r="2" fill="#f59e0b" opacity="0.8"/>
 </svg>

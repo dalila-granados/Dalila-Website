@@ -60,8 +60,8 @@ body {
         url('gold-stars-2.svg');
     background-repeat: no-repeat, no-repeat;
     background-position: 
-        calc(50% - 590px) 120px,
-        calc(50% + 510px) 260px;
+        calc(50% - 630px) 140px,
+        calc(50% + 520px) 280px;
     background-size: 260px auto, 300px auto;
     background-attachment: fixed, fixed;
     min-height: 100vh;
@@ -149,12 +149,10 @@ main {
 /* Header & Site Brand */
 header {
     background-color: var(--bg-card);
-    background-image: 
-        linear-gradient(90deg, #ffffff 60%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.5) 100%),
-        url('gold-stars-1.svg');
-    background-repeat: no-repeat, no-repeat;
-    background-position: left top, right 1.25rem top 0.75rem;
-    background-size: 100% 100%, 150px auto;
+    background-image: url('gold-stars-1.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.75rem top 1rem;
+    background-size: 160px auto;
     border-bottom: 1px solid var(--border-color);
     padding-top: 1.75rem;
     padding-bottom: 1.25rem;
@@ -561,8 +559,8 @@ footer {
         url('gold-stars-2.svg'),
         url('gold-stars-1.svg');
     background-repeat: no-repeat, no-repeat;
-    background-position: left 1.5rem center, right 1.5rem center;
-    background-size: 95px auto, 90px auto;
+    background-position: left 2rem center, right 2rem center;
+    background-size: 120px auto, 115px auto;
     border-top: 1px solid var(--border-color);
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -589,31 +587,40 @@ footer p {
 }
 
 /* Responsive Star Accents */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     body {
         background-position: 
-            left -40px top 120px,
-            right -40px top 260px;
-        background-size: 200px auto, 220px auto;
+            left 10px top 140px,
+            right 10px top 280px;
+        background-size: 180px auto, 200px auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+        /* When content fills screen width, keep background clean to prevent overlapping body content */
+        background-image: none;
+    }
+
+    header {
+        background-position: right 1rem top 1rem;
+        background-size: 130px auto;
+    }
+
+    footer {
+        background-position: left 1rem center, right 1rem center;
+        background-size: 90px auto, 90px auto;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        background-position: 
-            left -70px top 90px,
-            right -70px top 350px;
-        background-size: 150px auto, 160px auto;
-        background-attachment: scroll, scroll;
-    }
-
     header {
-        background-position: left top, right -20px top 0.5rem;
-        background-size: 100% 100%, 110px auto;
+        background-position: right 0.5rem top 0.5rem;
+        background-size: 100px auto;
     }
 
     footer {
-        background-position: left -20px center, right -20px center;
-        background-size: 70px auto, 70px auto;
+        background-position: left 0.5rem center, right 0.5rem center;
+        background-size: 75px auto, 75px auto;
     }
 }
