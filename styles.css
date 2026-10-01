@@ -55,6 +55,15 @@ body {
     line-height: 1.65;
     color: var(--text-primary);
     background-color: var(--bg-main);
+    background-image: 
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 
+        calc(50% - 590px) 120px,
+        calc(50% + 510px) 260px;
+    background-size: 260px auto, 300px auto;
+    background-attachment: fixed, fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -140,13 +149,22 @@ main {
 /* Header & Site Brand */
 header {
     background-color: var(--bg-card);
+    background-image: 
+        linear-gradient(90deg, #ffffff 60%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.5) 100%),
+        url('gold-stars-1.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right 1.25rem top 0.75rem;
+    background-size: 100% 100%, 150px auto;
     border-bottom: 1px solid var(--border-color);
     padding-top: 1.75rem;
     padding-bottom: 1.25rem;
     box-shadow: var(--shadow-sm);
+    position: relative;
 }
 
 .brand-wrapper {
+    position: relative;
+    z-index: 1;
     margin-bottom: 1rem;
 }
 
@@ -221,6 +239,8 @@ nav {
 
 /* Section Card Wrappers */
 section {
+    position: relative;
+    z-index: 1;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
@@ -535,13 +555,26 @@ details[open] summary {
 
 /* Footer */
 footer {
+    position: relative;
     background-color: var(--bg-card);
+    background-image: 
+        url('gold-stars-2.svg'),
+        url('gold-stars-1.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 1.5rem center, right 1.5rem center;
+    background-size: 95px auto, 90px auto;
     border-top: 1px solid var(--border-color);
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+.footer-nav,
+footer p {
+    position: relative;
+    z-index: 1;
 }
 
 footer p {
@@ -553,4 +586,34 @@ footer p {
     justify-content: center;
     gap: 1.25rem;
     margin-bottom: 1rem;
+}
+
+/* Responsive Star Accents */
+@media (max-width: 1200px) {
+    body {
+        background-position: 
+            left -40px top 120px,
+            right -40px top 260px;
+        background-size: 200px auto, 220px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: 
+            left -70px top 90px,
+            right -70px top 350px;
+        background-size: 150px auto, 160px auto;
+        background-attachment: scroll, scroll;
+    }
+
+    header {
+        background-position: left top, right -20px top 0.5rem;
+        background-size: 100% 100%, 110px auto;
+    }
+
+    footer {
+        background-position: left -20px center, right -20px center;
+        background-size: 70px auto, 70px auto;
+    }
 }

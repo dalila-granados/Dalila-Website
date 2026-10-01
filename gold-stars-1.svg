@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" fill="none">
+    <!-- Star 1: Elegant 4-point sparkle (Top Left) -->
+    <g transform="translate(48, 56)">
+        <path d="M 0,-10 Q 0,0 10,0 Q 0,0 0,10 Q 0,0 -10,0 Q 0,0 0,-10 Z" fill="#d4af37" opacity="0.55"/>
+        <circle cx="0" cy="0" r="1.5" fill="#fffbe8" opacity="0.8"/>
+    </g>
+
+    <!-- Star 2: 5-point star (Top Right) -->
+    <g transform="translate(230, 42) scale(0.9)">
+        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#e5b83b" opacity="0.48"/>
+    </g>
+
+    <!-- Star 3: Diamond sparkle (Upper Center) -->
+    <g transform="translate(142, 110)">
+        <path d="M 0,-7 Q 0,0 7,0 Q 0,0 0,7 Q 0,0 -7,0 Q 0,0 0,-7 Z" fill="#f3c448" opacity="0.5"/>
+        <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Star 4: Micro cross sparkle (Right) -->
+    <g transform="translate(315, 125)">
+        <path d="M 0,-5 L 0,5 M -5,0 L 5,0" stroke="#dfb142" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+    </g>
+
+    <!-- Star 5: 5-point star (Left Center) -->
+    <g transform="translate(75, 185) scale(0.75)">
+        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#d4af37" opacity="0.45"/>
+    </g>
+
+    <!-- Star 6: Large 4-point sparkle (Center Right) -->
+    <g transform="translate(195, 215)">
+        <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#e5b83b" opacity="0.52"/>
+        <circle cx="0" cy="0" r="1.8" fill="#fffbe8" opacity="0.85"/>
+    </g>
+
+    <!-- Star 7: 4-point sparkle (Lower Right) -->
+    <g transform="translate(310, 275)">
+        <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="#f3c448" opacity="0.46"/>
+        <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Star 8: 5-point star (Bottom Left) -->
+    <g transform="translate(110, 295) scale(0.8)">
+        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#d4af37" opacity="0.42"/>
+    </g>
+
+    <!-- Star 9: Micro cross sparkle (Bottom Center) -->
+    <g transform="translate(245, 315)">
+        <path d="M 0,-4.5 L 0,4.5 M -4.5,0 L 4.5,0" stroke="#f3c448" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+    </g>
+
+    <!-- Subtle Stardust Specks -->
+    <circle cx="25" cy="140" r="1.5" fill="#d4af37" opacity="0.35"/>
+    <circle cx="160" cy="25" r="1.5" fill="#f3c448" opacity="0.32"/>
+    <circle cx="280" cy="70" r="1.3" fill="#e5b83b" opacity="0.3"/>
+    <circle cx="260" cy="170" r="1.5" fill="#d4af37" opacity="0.33"/>
+    <circle cx="130" cy="245" r="1.3" fill="#f3c448" opacity="0.3"/>
+    <circle cx="35" cy="325" r="1.5" fill="#e5b83b" opacity="0.35"/>
+    <circle cx="335" cy="345" r="1.2" fill="#d4af37" opacity="0.28"/>
+</svg>

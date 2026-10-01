@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520" fill="none">
+    <!-- Star 1: Radiant 4-point sparkle (Top) -->
+    <g transform="translate(130, 75)">
+        <path d="M 0,-11 Q 0,0 11,0 Q 0,0 0,11 Q 0,0 -11,0 Q 0,0 0,-11 Z" fill="#d4af37" opacity="0.52"/>
+        <circle cx="0" cy="0" r="1.6" fill="#fffef0" opacity="0.85"/>
+    </g>
+
+    <!-- Star 2: 5-point star (Top Right) -->
+    <g transform="translate(370, 60) scale(0.95)">
+        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#e5b83b" opacity="0.46"/>
+    </g>
+
+    <!-- Star 3: Diamond shimmer rotated 45 deg -->
+    <g transform="translate(250, 165) rotate(45)">
+        <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="#f3c448" opacity="0.42"/>
+        <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Star 4: 4-point sparkle (Right Center) -->
+    <g transform="translate(450, 210)">
+        <path d="M 0,-9 Q 0,0 9,0 Q 0,0 0,9 Q 0,0 -9,0 Q 0,0 0,-9 Z" fill="#d4af37" opacity="0.45"/>
+        <circle cx="0" cy="0" r="1.2" fill="#fffbe8" opacity="0.75"/>
+    </g>
+
+    <!-- Star 5: 5-point star (Left Center) -->
+    <g transform="translate(70, 270) scale(0.7)">
+        <polygon points="0,-7 2.1,-2.1 7,-2.1 3,0.9 4.4,6.1 0,3 -4.4,6.1 -3,0.9 -7,-2.1 -2.1,-2.1" fill="#e5b83b" opacity="0.44"/>
+    </g>
+
+    <!-- Star 6: Elegant 4-point sparkle (Center Bottom) -->
+    <g transform="translate(300, 320)">
+        <path d="M 0,-13 Q 0,0 13,0 Q 0,0 0,13 Q 0,0 -13,0 Q 0,0 0,-13 Z" fill="#e5b83b" opacity="0.5"/>
+        <circle cx="0" cy="0" r="1.8" fill="#fffef0" opacity="0.85"/>
+    </g>
+
+    <!-- Star 7: Micro cross sparkle (Lower Left) -->
+    <g transform="translate(180, 415)">
+        <path d="M 0,-5 L 0,5 M -5,0 L 5,0" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+    </g>
+
+    <!-- Star 8: 4-point sparkle (Bottom Right) -->
+    <g transform="translate(420, 420)">
+        <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="#f3c448" opacity="0.44"/>
+        <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Subtle Stardust Constellation Dots -->
+    <circle cx="210" cy="80" r="1.4" fill="#d4af37" opacity="0.3"/>
+    <circle cx="40" cy="170" r="1.3" fill="#e5b83b" opacity="0.32"/>
+    <circle cx="330" cy="225" r="1.4" fill="#f3c448" opacity="0.3"/>
+    <circle cx="480" cy="335" r="1.3" fill="#d4af37" opacity="0.28"/>
+    <circle cx="110" cy="380" r="1.5" fill="#e5b83b" opacity="0.3"/>
+    <circle cx="240" cy="475" r="1.3" fill="#f3c448" opacity="0.28"/>
+</svg>
