@@ -61,23 +61,71 @@ body {
     line-height: 1.65;
     color: var(--text-primary);
     background-color: var(--bg-main);
-    background-image: 
-        url('gold-stars-1.svg'),
-        url('gold-stars-2.svg'),
-        url('gold-stars-1.svg'),
-        url('gold-stars-2.svg'),
-        url('gold-stars-1.svg');
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: 
-        calc(50% - 630px) 140px,
-        calc(50% + 530px) 260px,
-        calc(50% - 610px) 680px,
-        calc(50% + 520px) 880px,
-        calc(50% - 620px) 1300px;
-    background-size: 260px auto, 300px auto, 240px auto, 270px auto, 250px auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Page 1: Home Page Star Constellation */
+body.page-home {
+    background-image: 
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg'),
+        url('gold-stars-3.svg'),
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg'),
+        url('gold-stars-3.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        calc(50% - 640px) 130px,
+        calc(50% + 530px) 250px,
+        calc(50% - 610px) 630px,
+        calc(50% + 540px) 840px,
+        calc(50% - 630px) 1200px,
+        calc(50% + 510px) 1420px;
+    background-size: 260px auto, 310px auto, 240px auto, 270px auto, 250px auto, 280px auto;
+}
+
+/* Page 2: Resume Page Star Constellation (Distinct Rhythm & Higher Frequency for Longer Page) */
+body.page-resume {
+    background-image: 
+        url('gold-stars-3.svg'),
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg'),
+        url('gold-stars-3.svg'),
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg'),
+        url('gold-stars-3.svg'),
+        url('gold-stars-1.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        calc(50% + 540px) 90px,
+        calc(50% - 630px) 310px,
+        calc(50% + 520px) 580px,
+        calc(50% - 650px) 910px,
+        calc(50% + 540px) 1250px,
+        calc(50% - 610px) 1590px,
+        calc(50% + 530px) 1920px,
+        calc(50% - 630px) 2240px;
+    background-size: 290px auto, 250px auto, 280px auto, 300px auto, 240px auto, 280px auto, 260px auto, 250px auto;
+}
+
+/* Page 3: Projects Page Star Constellation (Playful Asymmetric Placement) */
+body.page-projects {
+    background-image: 
+        url('gold-stars-2.svg'),
+        url('gold-stars-3.svg'),
+        url('gold-stars-1.svg'),
+        url('gold-stars-2.svg'),
+        url('gold-stars-3.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        calc(50% - 620px) 80px,
+        calc(50% + 510px) 190px,
+        calc(50% - 650px) 490px,
+        calc(50% + 550px) 740px,
+        calc(50% - 590px) 1040px;
+    background-size: 280px auto, 250px auto, 300px auto, 240px auto, 270px auto;
 }
 
 /* Typography */
@@ -170,6 +218,24 @@ header {
     padding-bottom: 1.25rem;
     box-shadow: var(--shadow-sm);
     position: relative;
+}
+
+body.page-home header {
+    background-image: url('gold-stars-1.svg');
+    background-position: right 1.75rem top 1rem;
+    background-size: 160px auto;
+}
+
+body.page-resume header {
+    background-image: url('gold-stars-3.svg');
+    background-position: right 2.25rem top 0.75rem;
+    background-size: 175px auto;
+}
+
+body.page-projects header {
+    background-image: url('gold-stars-2.svg');
+    background-position: right 1.5rem top 1.25rem;
+    background-size: 165px auto;
 }
 
 .brand-wrapper {
@@ -604,14 +670,38 @@ footer p {
 
 /* Responsive Star Accents */
 @media (max-width: 1400px) {
-    body {
+    body.page-home {
         background-position: 
-            left 10px top 140px,
-            right 10px top 260px,
-            left 10px top 680px,
-            right 10px top 880px,
-            left 10px top 1300px;
-        background-size: 180px auto, 200px auto, 170px auto, 190px auto, 180px auto;
+            left 10px top 130px,
+            right 10px top 250px,
+            left 10px top 630px,
+            right 10px top 840px,
+            left 10px top 1200px,
+            right 10px top 1420px;
+        background-size: 180px auto, 200px auto, 170px auto, 190px auto, 180px auto, 190px auto;
+    }
+
+    body.page-resume {
+        background-position: 
+            right 10px top 90px,
+            left 10px top 310px,
+            right 10px top 580px,
+            left 10px top 910px,
+            right 10px top 1250px,
+            left 10px top 1590px,
+            right 10px top 1920px,
+            left 10px top 2240px;
+        background-size: 190px auto, 175px auto, 185px auto, 200px auto, 170px auto, 185px auto, 175px auto, 180px auto;
+    }
+
+    body.page-projects {
+        background-position: 
+            left 10px top 80px,
+            right 10px top 190px,
+            left 10px top 490px,
+            right 10px top 740px,
+            left 10px top 1040px;
+        background-size: 185px auto, 175px auto, 200px auto, 170px auto, 180px auto;
     }
 }
 
