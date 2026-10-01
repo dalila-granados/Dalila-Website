@@ -294,8 +294,8 @@ function initContactForm() {
             if (response.ok) {
                 showStatus(
                     'success',
-                    'Message Sent Successfully!',
-                    `Thank you, <strong>${escapeHtml(name)}</strong>! Your message has been sent. I will review it and get back to you as soon as possible.`
+                    'Message Sent!',
+                    `Thank you, <strong>${escapeHtml(name)}</strong>! I will get back to you as soon as possible.`
                 );
                 contactForm.reset();
             } else {
