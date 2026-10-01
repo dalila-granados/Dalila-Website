@@ -3,26 +3,32 @@
    Modern, responsive, and clean design system using Vanilla CSS.
    ========================================================================== */
 
-/* CSS Custom Properties / Design Tokens */
+/* CSS Custom Properties / Design Tokens - Baby Blue & Soft Yellow Theme */
 :root {
-    --primary-color: #8f25ebaa;
-    --primary-hover: #811dd8;
-    --primary-light: #eff6ff;
-    --secondary-color: #0f172a;
-    --accent-color: #dfdf37;
-    --accent-light: #f0fdfa;
+    --primary-color: #0284c7;       /* Rich Baby Blue / Sky for accessible text & elements */
+    --primary-hover: #0369a1;       /* Deep Sky Blue for hover states */
+    --primary-light: #f0f9ff;       /* Very soft baby blue tint for badges, tags, pills */
+    --primary-baby-blue: #38bdf8;   /* Vibrant baby blue for gradients, glows, and accents */
+    --primary-sky-soft: #bae6fd;    /* Soft pastel baby blue */
+    
+    --secondary-color: #0c2340;     /* Deep midnight navy for bold headings & text contrast */
+    
+    --accent-color: #facc15;        /* Soft sunny yellow */
+    --accent-soft: #fef08a;         /* Delicate soft butter yellow */
+    --accent-light: #fefce8;        /* Ultra soft pastel yellow for hovers & highlights */
+    --accent-glow: rgba(250, 204, 21, 0.4);
 
     --text-primary: #1e293b;
     --text-secondary: #475569;
     --text-muted: #64748b;
     --bg-main: #f8fafc;
     --bg-card: #ffffff;
-    --border-color: #e2e8f0;
-    --border-hover: #cbd5e1;
+    --border-color: #e0f2fe;
+    --border-hover: #bae6fd;
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.06);
 
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -102,8 +108,9 @@ h2::after {
     bottom: -2px;
     left: 0;
     width: 60px;
-    height: 2px;
-    background-color: var(--primary-color);
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--primary-baby-blue) 0%, var(--accent-color) 100%);
 }
 
 h3 {
@@ -224,15 +231,16 @@ nav {
 
 .nav-links a:hover {
     background-color: var(--primary-light);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--primary-hover);
+    border-color: var(--primary-baby-blue);
     text-decoration: none;
 }
 
 .nav-links a.active {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-baby-blue) 100%);
     color: #ffffff;
     border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
 }
 
 /* Section Card Wrappers */
@@ -383,8 +391,8 @@ li {
 
 .project-card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--border-hover);
+    box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.12);
+    border-color: var(--primary-sky-soft);
 }
 
 .project-card h3 {
@@ -397,6 +405,7 @@ li {
     font-family: var(--font-mono);
     background-color: var(--primary-light);
     color: var(--primary-color);
+    border: 1px solid var(--primary-sky-soft);
     padding: 0.25rem 0.5rem;
     border-radius: var(--radius-sm);
     margin-top: 0.5rem;
@@ -484,8 +493,8 @@ input[type="email"]:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    border-color: var(--primary-baby-blue);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.22);
 }
 
 textarea {
@@ -513,12 +522,14 @@ button {
 }
 
 button[type="submit"] {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-baby-blue) 100%);
     color: #ffffff;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
 }
 
 button[type="submit"]:hover {
-    background-color: var(--primary-hover);
+    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
 }
 
 button[type="reset"] {
@@ -661,7 +672,7 @@ body.welcome-loaded footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #0f172a 65%, #050811 100%);
+    background: radial-gradient(circle at 50% 25%, #0c2340 0%, #09172e 60%, #030814 100%);
     padding: 1.5rem;
     overflow: hidden;
     opacity: 1;
@@ -685,28 +696,30 @@ body.welcome-loaded footer {
     pointer-events: none;
 }
 
-/* Ambient Purple & Gold Radial Glows */
-.welcome-glow-purple {
+/* Ambient Baby Blue & Soft Yellow Radial Glows */
+.welcome-glow-purple,
+.welcome-glow-blue {
     position: absolute;
     top: -120px;
     left: -100px;
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(143, 37, 235, 0.35) 0%, rgba(143, 37, 235, 0.05) 55%, transparent 70%);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(56, 189, 248, 0.05) 55%, transparent 70%);
     filter: blur(60px);
     pointer-events: none;
     z-index: 1;
 }
 
-.welcome-glow-gold {
+.welcome-glow-gold,
+.welcome-glow-yellow {
     position: absolute;
     bottom: -120px;
     right: -100px;
     width: 550px;
     height: 550px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(234, 179, 8, 0.28) 0%, rgba(217, 119, 6, 0.05) 55%, transparent 70%);
+    background: radial-gradient(circle, rgba(254, 240, 138, 0.32) 0%, rgba(250, 204, 21, 0.05) 55%, transparent 70%);
     filter: blur(60px);
     pointer-events: none;
     z-index: 1;
@@ -758,17 +771,18 @@ body.welcome-loaded footer {
     z-index: 2;
     max-width: 560px;
     width: 100%;
-    background: rgba(15, 23, 42, 0.72);
+    background: rgba(12, 28, 50, 0.78);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(186, 230, 253, 0.25);
     border-radius: 24px;
     padding: 2.75rem 2.25rem 2.25rem;
     text-align: center;
     box-shadow: 
-        0 25px 60px -15px rgba(0, 0, 0, 0.7),
-        0 0 45px rgba(143, 37, 235, 0.22),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        0 25px 60px -15px rgba(0, 0, 0, 0.8),
+        0 0 50px rgba(56, 189, 248, 0.22),
+        0 0 25px rgba(254, 240, 138, 0.12),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
     animation: welcomeCardPop 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -783,26 +797,26 @@ body.welcome-loaded footer {
     }
 }
 
-/* LSU Pill Badge */
+/* Welcome Pill Badge */
 .welcome-pill {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 1.1rem;
     border-radius: var(--radius-full);
-    background: rgba(143, 37, 235, 0.22);
-    border: 1px solid rgba(234, 179, 8, 0.45);
+    background: rgba(56, 189, 248, 0.14);
+    border: 1px solid rgba(254, 240, 138, 0.55);
     color: #fef08a;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    box-shadow: 0 0 16px rgba(234, 179, 8, 0.2);
+    box-shadow: 0 0 16px rgba(254, 240, 138, 0.25);
 }
 
 .welcome-pill-sparkle {
-    color: #facc15;
+    color: #fef08a;
     animation: starPulse 2s ease-in-out infinite alternate;
 }
 
@@ -830,10 +844,10 @@ body.welcome-loaded footer {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #dfdf37;
+    border: 3px solid #fef08a;
     box-shadow: 
-        0 0 25px rgba(143, 37, 235, 0.5),
-        0 0 12px rgba(234, 179, 8, 0.4);
+        0 0 25px rgba(56, 189, 248, 0.55),
+        0 0 12px rgba(254, 240, 138, 0.45);
     display: block;
 }
 
@@ -843,7 +857,7 @@ body.welcome-loaded footer {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #ffffff 30%, #fef08a 80%, #eab308 100%);
+    background: linear-gradient(135deg, #ffffff 15%, #bae6fd 60%, #fef08a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.025em;
@@ -858,13 +872,13 @@ body.welcome-loaded footer {
 .welcome-name {
     font-size: 1.15rem;
     font-weight: 600;
-    color: #f1f5f9;
+    color: #f0f9ff;
     margin-bottom: 0.35rem;
 }
 
 .welcome-tagline {
     font-size: 0.92rem;
-    color: #94a3b8;
+    color: #bae6fd;
     margin-bottom: 1.75rem;
 }
 
@@ -882,9 +896,9 @@ body.welcome-loaded footer {
 .welcome-timer-progress {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #8f25eb, #eab308);
+    background: linear-gradient(90deg, #38bdf8 0%, #7dd3fc 45%, #fef08a 100%);
     border-radius: var(--radius-full);
-    box-shadow: 0 0 8px rgba(234, 179, 8, 0.5);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
 }
 
 /* Enter Website Button */
@@ -898,16 +912,17 @@ body.welcome-loaded footer {
     align-items: center;
     justify-content: center;
     gap: 0.65rem;
-    background: linear-gradient(135deg, #8f25eb 0%, #6d28d9 100%);
+    background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
     color: #ffffff;
     padding: 0.75rem 2.25rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(254, 240, 138, 0.45);
     cursor: pointer;
     box-shadow: 
-        0 4px 18px rgba(143, 37, 235, 0.45),
+        0 4px 18px rgba(2, 132, 199, 0.45),
+        0 0 14px rgba(56, 189, 248, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     transition: 
         transform var(--transition-fast),
@@ -918,9 +933,9 @@ body.welcome-loaded footer {
 .welcome-btn-enter:hover {
     transform: translateY(-2px);
     box-shadow: 
-        0 8px 24px rgba(143, 37, 235, 0.65),
-        0 0 18px rgba(234, 179, 8, 0.4);
-    border-color: rgba(234, 179, 8, 0.6);
+        0 8px 24px rgba(2, 132, 199, 0.65),
+        0 0 20px rgba(254, 240, 138, 0.6);
+    border-color: rgba(254, 240, 138, 0.85);
 }
 
 .welcome-btn-enter:active {
@@ -937,7 +952,7 @@ body.welcome-loaded footer {
 
 .welcome-hint {
     font-size: 0.8rem;
-    color: #64748b;
+    color: #94a3b8;
     margin-top: 1rem;
     margin-bottom: 0;
 }
@@ -947,7 +962,7 @@ body.welcome-loaded footer {
     padding: 0.15rem 0.4rem;
     font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: #cbd5e1;
+    color: #bae6fd;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
@@ -962,9 +977,9 @@ body.welcome-loaded footer {
     padding: 0.5rem 0.9rem;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #7c3aed;
-    background: rgba(143, 37, 235, 0.08);
-    border: 1px dashed rgba(143, 37, 235, 0.4);
+    color: #0284c7;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px dashed rgba(56, 189, 248, 0.45);
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -972,10 +987,10 @@ body.welcome-loaded footer {
 
 .nav-action-btn:hover {
     background: var(--primary-light);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--primary-hover);
+    border-color: var(--primary-baby-blue);
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(143, 37, 235, 0.15);
+    box-shadow: 0 2px 6px rgba(56, 189, 248, 0.25);
 }
 
 /* Footer Replay Intro Link/Button */
