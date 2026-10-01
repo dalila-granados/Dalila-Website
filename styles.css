@@ -576,8 +576,10 @@ textarea {
 
 .form-actions {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 0.75rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
 }
 
 button {
@@ -613,6 +615,166 @@ button[type="reset"] {
 button[type="reset"]:hover {
     background-color: var(--border-color);
     color: var(--secondary-color);
+}
+
+button:disabled,
+button.is-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+/* Required field indicator */
+.required-indicator {
+    color: #e11d48;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.direct-email-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.direct-email-link:hover {
+    color: var(--primary-hover);
+}
+
+/* Contact Form Live Status Feedback Banner */
+.form-status {
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    animation: statusSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes statusSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-status .status-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.form-status .status-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.form-status .status-message {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-status .status-message strong {
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.form-status .status-message code {
+    background: rgba(0, 0, 0, 0.06);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+.status-action-row {
+    margin-top: 0.85rem;
+}
+
+.status-mailto-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+/* Success status style */
+.form-status.status-success {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 1px solid #86efac;
+    color: #14532d;
+}
+
+.form-status.status-success .status-icon {
+    color: #16a34a;
+}
+
+.form-status.status-success .status-message strong {
+    color: #14532d;
+}
+
+/* Error status style */
+.form-status.status-error {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 1px solid #fca5a5;
+    color: #7f1d1d;
+}
+
+.form-status.status-error .status-icon {
+    color: #dc2626;
+}
+
+.form-status.status-error .status-mailto-btn {
+    background-color: #b91c1c;
+    color: #ffffff;
+    border: 1px solid #991b1b;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-status.status-error .status-mailto-btn:hover {
+    background-color: #991b1b;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Loading Spinner */
+.btn-spinner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.spinner-svg {
+    animation: buttonSpin 0.85s linear infinite;
+}
+
+.spinner-circle {
+    stroke-dasharray: 45, 60;
+}
+
+@keyframes buttonSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Details & Summary (Collapsible) */

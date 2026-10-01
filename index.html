@@ -94,6 +94,7 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="project.html">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -171,34 +172,50 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <h2>Contact Me</h2>
             <p>I would love to connect regarding any opportunities, internship roles, and collaborative projects.
-                Feel free to reach out via email or using the form below.</p>
+                Feel free to reach out directly via email at <a href="mailto:dalilagranados08@gmail.com" class="direct-email-link">dalilagranados08@gmail.com</a> or send a note using the form below.</p>
 
-            <form action="#" method="post">
+            <form id="contact-form" action="https://formsubmit.co/dalilagranados08@gmail.com" method="POST">
+                <!-- FormSubmit Configuration & Anti-Spam -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" id="contact-form-subject" value="New Portfolio Contact Message">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
                 <fieldset>
                     <legend>Direct Contact Inquiry</legend>
+
+                    <!-- Dynamic Live Status Banner -->
+                    <div id="contact-status" class="form-status" aria-live="polite" role="status" style="display: none;"></div>
+
                     <div class="form-group">
-                        <label for="contact-name">Your Full Name:</label>
-                        <input type="text" id="contact-name" name="name" placeholder="First and Last Name" required>
+                        <label for="contact-name">Your Full Name: <span class="required-indicator" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-name" name="name" placeholder="First and Last Name" required autocomplete="name">
                     </div>
                     <div class="form-group">
-                        <label for="contact-email">Your Email Address:</label>
-                        <input type="email" id="contact-email" name="email" placeholder="email@example.com" required>
+                        <label for="contact-email">Your Email Address: <span class="required-indicator" aria-hidden="true">*</span></label>
+                        <input type="email" id="contact-email" name="email" placeholder="email@example.com" required autocomplete="email">
                     </div>
                     <div class="form-group">
-                        <label for="contact-subject">Subject:</label>
-                        <input type="text" id="contact-subject" name="subject" placeholder="Inquiry topic" required>
+                        <label for="contact-subject">Subject: <span class="required-indicator" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="Inquiry topic (e.g. Internship, Project Inquiry)" required>
                     </div>
                     <div class="form-group">
-                        <label for="contact-message">Message:</label>
-                        <textarea id="contact-message" name="message" rows="5" placeholder="Your message here..."
-                            required></textarea>
+                        <label for="contact-message">Message: <span class="required-indicator" aria-hidden="true">*</span></label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Your message here..." required></textarea>
                     </div>
                     <div class="form-actions">
-                        <button type="submit">Send Message</button>
-                        <button type="reset">Clear Form</button>
+                        <button type="submit" id="contact-submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" aria-hidden="true" style="display: none;">
+                                <svg class="spinner-svg" viewBox="0 0 24 24" width="16" height="16">
+                                    <circle class="spinner-circle" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <button type="reset" id="contact-reset-btn">Clear Form</button>
                     </div>
                 </fieldset>
             </form>
@@ -210,11 +227,11 @@
             <a href="index.html">Home</a>
             <a href="resume.html">Resume</a>
             <a href="project.html">Projects</a>
+            <a href="#contact">Contact</a>
             <a href="https://github.com/dalila-granados" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
         <p>&copy; 2026 Dalila Stephany Granados-Martinez. All rights reserved.</p>
         <p><button type="button" class="footer-replay-btn js-replay-welcome">Replay Welcome Screen</button></p>
-        <p><small>Built with semantic HTML5 and clean CSS styling.</small></p>
     </footer>
 
     <script src="welcome.js"></script>
