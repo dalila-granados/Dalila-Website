@@ -624,3 +624,422 @@ footer p {
         background-size: 75px auto, 75px auto;
     }
 }
+
+/* ==========================================================================
+   Welcome Splash Overlay Styles
+   ========================================================================== */
+
+body.welcome-active {
+    overflow: hidden;
+}
+
+body.welcome-loaded header,
+body.welcome-loaded main,
+body.welcome-loaded footer {
+    animation: welcomePageEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes welcomePageEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Splash Overlay Fullscreen Container */
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #0f172a 65%, #050811 100%);
+    padding: 1.5rem;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    filter: blur(0);
+    transition: 
+        opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.75s;
+    user-select: none;
+}
+
+/* Fade-out state when transitioning into website */
+.welcome-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.04);
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+/* Ambient Purple & Gold Radial Glows */
+.welcome-glow-purple {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(143, 37, 235, 0.35) 0%, rgba(143, 37, 235, 0.05) 55%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.welcome-glow-gold {
+    position: absolute;
+    bottom: -120px;
+    right: -100px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.28) 0%, rgba(217, 119, 6, 0.05) 55%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Floating Gold Star Illustrations */
+.welcome-star-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.65;
+}
+
+.welcome-star-left {
+    top: 6%;
+    left: 4%;
+    max-width: 250px;
+    animation: welcomeFloatLeft 7s ease-in-out infinite alternate;
+}
+
+.welcome-star-right {
+    bottom: 6%;
+    right: 4%;
+    max-width: 280px;
+    animation: welcomeFloatRight 8s ease-in-out infinite alternate;
+}
+
+@keyframes welcomeFloatLeft {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-16px) rotate(-3deg);
+    }
+}
+
+@keyframes welcomeFloatRight {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(16px) rotate(3deg);
+    }
+}
+
+/* Glassmorphic Central Welcome Card */
+.welcome-card {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    padding: 2.75rem 2.25rem 2.25rem;
+    text-align: center;
+    box-shadow: 
+        0 25px 60px -15px rgba(0, 0, 0, 0.7),
+        0 0 45px rgba(143, 37, 235, 0.22),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    animation: welcomeCardPop 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes welcomeCardPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* LSU Pill Badge */
+.welcome-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: var(--radius-full);
+    background: rgba(143, 37, 235, 0.22);
+    border: 1px solid rgba(234, 179, 8, 0.45);
+    color: #fef08a;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 16px rgba(234, 179, 8, 0.2);
+}
+
+.welcome-pill-sparkle {
+    color: #facc15;
+    animation: starPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes starPulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Avatar Preview */
+.welcome-avatar-wrapper {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1.25rem;
+}
+
+.welcome-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #dfdf37;
+    box-shadow: 
+        0 0 25px rgba(143, 37, 235, 0.5),
+        0 0 12px rgba(234, 179, 8, 0.4);
+    display: block;
+}
+
+.welcome-status-dot {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: #22c55e;
+    border: 2.5px solid #0f172a;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+/* Typography Inside Welcome Card */
+.welcome-title {
+    font-size: 2.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 30%, #fef08a 80%, #eab308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.025em;
+    border: none;
+    padding-bottom: 0;
+}
+
+.welcome-title::after {
+    display: none;
+}
+
+.welcome-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 0.35rem;
+}
+
+.welcome-tagline {
+    font-size: 0.92rem;
+    color: #94a3b8;
+    margin-bottom: 1.75rem;
+}
+
+/* 2-Second Timer Progress Bar */
+.welcome-timer-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-full);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome-timer-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #8f25eb, #eab308);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.5);
+}
+
+/* Enter Website Button */
+.welcome-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-btn-enter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    background: linear-gradient(135deg, #8f25eb 0%, #6d28d9 100%);
+    color: #ffffff;
+    padding: 0.75rem 2.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    box-shadow: 
+        0 4px 18px rgba(143, 37, 235, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: 
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.welcome-btn-enter:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 24px rgba(143, 37, 235, 0.65),
+        0 0 18px rgba(234, 179, 8, 0.4);
+    border-color: rgba(234, 179, 8, 0.6);
+}
+
+.welcome-btn-enter:active {
+    transform: translateY(0);
+}
+
+.welcome-arrow-icon {
+    transition: transform var(--transition-fast);
+}
+
+.welcome-btn-enter:hover .welcome-arrow-icon {
+    transform: translateX(4px);
+}
+
+.welcome-hint {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.welcome-hint kbd {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Nav Action Button for Replaying Intro */
+.nav-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7c3aed;
+    background: rgba(143, 37, 235, 0.08);
+    border: 1px dashed rgba(143, 37, 235, 0.4);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.nav-action-btn:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(143, 37, 235, 0.15);
+}
+
+/* Footer Replay Intro Link/Button */
+.footer-replay-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+    display: inline-block;
+    transition: color var(--transition-fast);
+}
+
+.footer-replay-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Mobile & Accessibility Optimizations */
+@media (max-width: 640px) {
+    .welcome-card {
+        padding: 2rem 1.25rem 1.75rem;
+        border-radius: 18px;
+    }
+
+    .welcome-title {
+        font-size: 1.65rem;
+    }
+
+    .welcome-avatar-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .welcome-star-decor {
+        opacity: 0.35;
+        max-width: 160px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .welcome-overlay,
+    .welcome-card,
+    .welcome-star-decor,
+    .welcome-btn-enter,
+    .welcome-pill-sparkle {
+        animation: none !important;
+        transition: opacity 0.2s ease !important;
+    }
+
+    .welcome-timer-progress {
+        transition: width 0.1s linear !important;
+    }
+}
