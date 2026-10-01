@@ -64,6 +64,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-baby-blue);
+    outline-offset: 2px;
 }
 
 /* Page 1: Home Page Star Constellation */
@@ -554,7 +560,7 @@ select {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 1rem;
     background-color: #ffffff;
     color: var(--text-primary);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
@@ -630,16 +636,6 @@ button.is-loading {
     color: #e11d48;
     font-weight: bold;
     margin-left: 2px;
-}
-
-.direct-email-link {
-    color: var(--primary-color);
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-.direct-email-link:hover {
-    color: var(--primary-hover);
 }
 
 /* Contact Form Live Status Feedback Banner */

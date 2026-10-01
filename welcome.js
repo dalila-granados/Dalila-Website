@@ -164,6 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('welcome-loaded');
         setBackgroundInert(false);
     }
+
+    // Initialize contact form handler
+    initContactForm();
 });
 
 /* ==========================================================================
@@ -324,12 +327,5 @@ function initContactForm() {
             if (btnSpinner) btnSpinner.style.display = 'none';
         }
     });
-}
-
-// Initialize contact form handler
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initContactForm);
-} else {
-    initContactForm();
 }
 
