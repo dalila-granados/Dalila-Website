@@ -3,7 +3,7 @@
  * Dalila Stephany Granados-Martinez - Personal Portfolio & Resume
  * 
  * Provides an elegant, animated welcome splash screen that smoothly fades
- * into the digital resume website after a brief 2-second preview, with
+ * into the digital resume website after a 10-second preview, with
  * immediate skip via click, Enter/Space/Escape keys, and replay capability.
  */
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,16 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Trigger reflow to restart animation reliably
         void progressBar.offsetWidth;
 
-        // 2-second smooth progress indicator
-        progressBar.style.transition = 'width 2000ms cubic-bezier(0.25, 1, 0.5, 1)';
+        // 10-second smooth progress indicator
+        progressBar.style.transition = 'width 10000ms linear';
         progressBar.style.width = '100%';
 
         if (autoFadeTimeout) clearTimeout(autoFadeTimeout);
 
-        // Auto fade into the site after 2 seconds
+        // Auto fade into the site after 10 seconds
         autoFadeTimeout = setTimeout(() => {
             dismissWelcome();
-        }, 2000);
+        }, 10000);
     }
 
     function showWelcome() {
