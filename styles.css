@@ -634,6 +634,38 @@ button.is-loading {
     box-shadow: none;
 }
 
+/* LinkedIn Connect Button */
+.btn-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.15rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0a66c2;
+    background-color: #ffffff;
+    border: 1px solid #0a66c2;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    margin-left: auto;
+    transition: all var(--transition-fast);
+}
+
+.btn-linkedin:hover {
+    background-color: #0a66c2;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.btn-linkedin svg {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+}
+
 /* Required field indicator */
 .required-indicator {
     color: #e11d48;
