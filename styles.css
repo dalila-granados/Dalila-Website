@@ -365,6 +365,9 @@ hr {
 }
 
 .profile-avatar img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
     border-radius: var(--radius-lg);
     border: 3px solid var(--border-color);
     background-color: var(--bg-main);
